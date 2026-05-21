@@ -221,7 +221,7 @@ $workspace = Get-AzOperationalInsightsWorkspace `
     -ResourceGroupName $WorkspaceRG `
     -Name $WorkspaceName
 
-
+#Se till att denna är korrekt log
 $query = @"
 InventoryStatusLog_CL
 | where TimeGenerated > ago(24h)
