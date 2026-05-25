@@ -293,24 +293,24 @@ $NotInMachines | Format-Table -AutoSize
 # ============================================================
 #fyll i dessa variablers med korrekt värden
 #ClientID= App id i appen
-$ClientId=""
+$ClientId="<Insert app registration clientID here>"
 #Client secret= Secret value för appen
-$ClientSecret=""
+$ClientSecret="<insert app registration secret here>"
 #TenantId= Directory ID som syns i appen
-$TenantId=""
+$TenantId="<insert app registration tenantID here>"
 #set context till tenant så vi inte är kvar i kundens subscription
 Set-AzContext -tenant $TenantId
 
 #Logs ingestion endpoint i Data collection endpointet
-$Endpoint=""
+$Endpoint="<insert data collection endpoint here>"
 
 
 
 #DCR IMMUTABLE ID
-$DCRID=""
+$DCRID="<insert DCR immmutable ID here>"
 
 #Hittas i JSON view av DCRet "outputStream"
-$Stream =""
+$Stream ="<insert DCR output stream here>"
 
 $scope = [System.Web.HttpUtility]::UrlEncode("https://monitor.azure.com//.default")   
 $body = "client_id=$ClientId&scope=$scope&client_secret=$ClientSecret&grant_type=client_credentials";
